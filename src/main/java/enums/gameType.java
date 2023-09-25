@@ -1,6 +1,6 @@
 package enums;
 
-public enum GameType {
+public enum gameType {
     PUZZLE,
     STORYTELLING,
     CARDGAME

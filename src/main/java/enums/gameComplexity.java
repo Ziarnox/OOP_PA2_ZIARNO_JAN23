@@ -1,6 +1,6 @@
 package enums;
 
-public enum GameComplexity {
+public enum gameComplexity {
     EASY,
     MEDIUM,
     HARD
