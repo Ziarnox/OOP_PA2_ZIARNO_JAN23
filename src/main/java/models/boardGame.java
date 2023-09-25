@@ -18,7 +18,7 @@ public class boardGame {
     private boolean onsitePlay;
     private String location;
     private boolean active;
-
+    private boolean finished;
 
     public boardGame(String name, gameType type, int minPlayers, int maxPlayers, int playingTime, gameComplexity complexity, boolean onlinePlay, boolean onsitePlay, String location) {
         this.name = name;
@@ -43,14 +43,15 @@ public class boardGame {
     public boolean isStorytellingGameActive() {
         return this.type == gameType.STORYTELLING && this.active;
     }
+    public boolean isFinished() {
+        return finished;
+    }
 
     public boolean canStartGame(List<player> players) {
         if (free && players.size() >= minPlayers && players.size() <= maxPlayers) {
             if (singlePlayer && players.size() == 1) {
                 return true;
-            } else if (!storytelling && !isStorytellingGameActive()) {
-                return true;
-            }
+            } else return !storytelling && !isStorytellingGameActive();
         }
         return false;
     }

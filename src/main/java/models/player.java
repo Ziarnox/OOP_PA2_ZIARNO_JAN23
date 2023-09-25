@@ -11,4 +11,9 @@ public class player {
         this.currentAge = currentAge;
         this.gameHistory = gameHistory;
     }
+
+    @Override
+    public String toString() {
+        return "Nickname: " + nickname + "\nCurrent Age: " + currentAge + "\nGame History: " + gameHistory;
+    }
 }
