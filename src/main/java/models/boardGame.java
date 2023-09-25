@@ -11,4 +11,10 @@ public class boardGame {
     private int playingTime;
     private gameComplexity complexity;
 
+    public String toString() {
+        return "Name: " + name + "\nType: " + type +
+                "\nMin Players: " + minPlayers + "\nMax Players: " + maxPlayers +
+                "\nPlaying Time: " + playingTime + " minutes" + "\nComplexity: " + complexity +
+                "\nOnline Play: Yes\nOnsite Play: Yes";
+    }
 }
